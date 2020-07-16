@@ -41,3 +41,37 @@ if (event.keyCode == 123) {
 return false;  
 }  
 }
+//fullscreen noback
+var elem = document.documentElement;
+var myVars;
+myVars = setTimeout(openFullscreen, 0000);
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { 
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { 
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+  myVars = setTimeout(openFullscreen2, 0000);
+
+}
+function openFullscreen2() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { 
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { 
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+  myVars = setTimeout(openFullscreen, 0000);
+
+}
+   window.onbeforeunload = confirmExit;
+    function confirmExit() {
+        return "You have attempted to leave this page. Are you sure?";
+    }
