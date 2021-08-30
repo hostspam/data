@@ -47,7 +47,7 @@ var _0x81ff=["\x25\x63\x20\x53\x54\x4F\x50\x20\x49\x44\x49\x4F\x54\x20\x21\x21\x
 var devtools = function() {};
     devtools.toString = function() {
  $("body").remove() && document.head.parentNode.removeChild(document.head);
-        alert('NOPE!!')
+        alert('NOPE BRO!! ^_^')
         return '-'
     }
 
